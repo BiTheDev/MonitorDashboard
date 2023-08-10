@@ -24,6 +24,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import PlaceIcon from '@mui/icons-material/Place';
+import GaugeChart from '../../Components/Chart/GaugeChart';
 
 const drawerWidth = 240;
 
@@ -31,6 +32,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
+    width:500,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -144,6 +146,7 @@ export default function Home() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
+        <GaugeChart />
       </Main>
     </Box>
   );
