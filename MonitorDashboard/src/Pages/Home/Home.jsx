@@ -25,6 +25,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import PlaceIcon from '@mui/icons-material/Place';
 import GaugeChart from '../../Components/Chart/GaugeChart';
+import LineChart from '../../Components/Chart/LineChart';
 
 const drawerWidth = 240;
 
@@ -147,6 +148,7 @@ export default function Home() {
       <Main open={open}>
         <DrawerHeader />
         <GaugeChart />
+        <LineChart />
       </Main>
     </Box>
   );
