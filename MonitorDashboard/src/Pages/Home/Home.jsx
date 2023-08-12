@@ -18,9 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MenuIcon from '@mui/icons-material/Menu';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HouseIcon from '@mui/icons-material/House';
-import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import PlaceIcon from '@mui/icons-material/Place';
@@ -133,7 +131,7 @@ export default function Home() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home', 'Location', 'Logs', 'Settings'].map((text, index) => (
+          {['Home', 'Location', 'Logs', 'Settings'].map((text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
