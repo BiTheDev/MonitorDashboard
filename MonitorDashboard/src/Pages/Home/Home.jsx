@@ -18,12 +18,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MenuIcon from '@mui/icons-material/Menu';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HouseIcon from '@mui/icons-material/House';
-import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import PlaceIcon from '@mui/icons-material/Place';
+import GaugeChart from '../../Components/Chart/GaugeChart';
+import LineChart from '../../Components/Chart/LineChart';
 
 const drawerWidth = 240;
 
@@ -31,6 +31,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
+    width:500,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -130,7 +131,7 @@ export default function Home() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home', 'Location', 'Logs', 'Settings'].map((text, index) => (
+          {['Home', 'Location', 'Logs', 'Settings'].map((text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -144,6 +145,8 @@ export default function Home() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
+        <GaugeChart />
+        <LineChart />
       </Main>
     </Box>
   );
