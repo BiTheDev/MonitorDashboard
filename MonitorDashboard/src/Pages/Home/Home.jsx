@@ -8,6 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import StatusPage from '../StatusPage/StatusPage';
 
 /* Icons */
 import IconButton from '@mui/material/IconButton';
@@ -22,8 +23,6 @@ import HouseIcon from '@mui/icons-material/House';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import PlaceIcon from '@mui/icons-material/Place';
-import GaugeChart from '../../Components/Chart/GaugeChart';
-import LineChart from '../../Components/Chart/LineChart';
 
 const drawerWidth = 240;
 
@@ -31,7 +30,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
-    width:500,
+    width:2200,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -145,8 +144,7 @@ export default function Home() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <GaugeChart />
-        <LineChart />
+        <StatusPage />
       </Main>
     </Box>
   );
