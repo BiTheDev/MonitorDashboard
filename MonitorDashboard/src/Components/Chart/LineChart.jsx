@@ -1,11 +1,14 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { Typography } from '@mui/material';
 import { Chart, LineController, LineElement, PointElement, LinearScale, CategoryScale } from 'chart.js';
 
 // Register the components
 Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale);
 
-const LineChart = () => {
+const LineChart = ({initialChartTitle, initialChartData}) => {
     const chartRef = useRef(null);
+    const [chartTitle, setChartTitle] = useState(initialChartTitle);
+    const [chartData, setChartData] = useState(initialChartData);
 
     useEffect(() => {
         let myChart;
@@ -13,8 +16,8 @@ const LineChart = () => {
             const data = {
                 labels: ["2023/7/28", "2023/7/29","2023/7/30","2023/7/31", "2023/8/1", "2023/8/2"],
                 datasets: [{
-                    label: 'My First Dataset',
-                    data: [15,30,45,25,20,40],
+                    label: 'Throughput',
+                    data: chartData,
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -37,10 +40,11 @@ const LineChart = () => {
                 myChart.destroy();
             }
         };
-    }, []);
+    }, [chartData, chartTitle]);
 
     return (
         <div style={{ width: '100%', height: '400px' }}>
+            <Typography variant="subtitle1" align="center">{chartTitle}</Typography>
             <canvas ref={chartRef}></canvas>
         </div>
     );

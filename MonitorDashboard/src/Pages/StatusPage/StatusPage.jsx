@@ -45,12 +45,12 @@ const StatusPage = () => {
         {/* Line Charts */}
         <Grid item xs={4}>
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
-            <LineChart />
+            <LineChart initialChartTitle={"ThroughPut - Upload"} initialChartData = {[15,30,45,25,20,40]} />
           </Paper>
         </Grid>
         <Grid item xs={4}>
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
-            <LineChart />
+            <LineChart initialChartTitle={"ThroughPut - Download"} initialChartData = {[15,20,40,30,20,30]} />
           </Paper>
         </Grid>
         <Grid item xs={4}>
