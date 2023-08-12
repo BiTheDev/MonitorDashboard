@@ -6,7 +6,7 @@ import StatusBox from "../../Components/Status/StatusBox";
 
 const StatusPage = () => {
   return (
-    <Container>
+    <Container maxWidth="xl">
       <Grid container spacing={3}>
         {/* Status Boxes */}
         <Grid item xs={4}>

@@ -11,10 +11,10 @@ const LineChart = () => {
         let myChart;
         if (chartRef.current) {
             const data = {
-                labels: [0,1,2,3,4,5,6,7,8,9],
+                labels: ["2023/7/28", "2023/7/29","2023/7/30","2023/7/31", "2023/8/1", "2023/8/2"],
                 datasets: [{
                     label: 'My First Dataset',
-                    data: [65, 59, 80, 81, 56],
+                    data: [15,30,45,25,20,40],
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
