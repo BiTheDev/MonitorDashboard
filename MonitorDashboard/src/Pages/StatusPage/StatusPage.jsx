@@ -38,7 +38,7 @@ const StatusPage = () => {
         </Grid>
         <Grid item xs={4}>
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '5px' }}>
-            <GaugeChart initialTitle={"Availability"} initialValue={60} />
+            <GaugeChart initialTitle={"Availability"} initialValue={55} />
           </Paper>
         </Grid>
         
