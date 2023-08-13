@@ -12,9 +12,9 @@ const GaugeChart = ({initialTitle, initialValue}) => {
         {title}
       </Typography>
       <ReactGaugeMeter
-        firstColor="red"
-        secondColor="orange"
-        thirdColor="green"
+        firstColor= "#E74C3C" //red
+        secondColor= "#F39C12" // orange
+        thirdColor="#2ECC71" // green
         value={value}
         style={{ height: "360px", width: "100%" }}
       />
