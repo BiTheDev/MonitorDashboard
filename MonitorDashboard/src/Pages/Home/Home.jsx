@@ -24,6 +24,8 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import PlaceIcon from '@mui/icons-material/Place';
 
+import FloorMap from '../../Components/FloorMap/FloorMap';
+
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -143,7 +145,7 @@ export default function Home() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <StatusPage />
+        <FloorMap />
       </Main>
     </Box>
   );
