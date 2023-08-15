@@ -8,6 +8,9 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import Logs from '../Logs/Logs';
+import Settings from '../Settings/Settings';
+import Dialogs from '../../Components/Dialogs/Dialogs';
 
 /* Icons */
 import IconButton from '@mui/material/IconButton';
@@ -82,6 +85,7 @@ const iconMapping = {
 export default function Home() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [page, setPage] = React.useState('Logs');
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -91,8 +95,13 @@ export default function Home() {
     setOpen(false);
   };
 
+  const handlePage = (text) => {
+    console.log(text);
+    setPage(text);
+  }
+
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' ,}}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -108,6 +117,7 @@ export default function Home() {
           <Typography variant="h6" noWrap component="div">
             Monitor Dashboard
           </Typography>
+          <Dialogs />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -132,7 +142,8 @@ export default function Home() {
         <List>
           {['Home', 'Location', 'Logs', 'Settings'].map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>
+              {/* <ListItemButton> */}
+              <ListItemButton onClick={ ()=> { handlePage(text); }}>
                 <ListItemIcon>
                 {iconMapping[text]}
                 </ListItemIcon>
@@ -144,6 +155,9 @@ export default function Home() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
+        { (page === 'Logs') && <Logs/> }
+        { (page === 'Settings') && <Settings/> }
+        
       </Main>
     </Box>
   );

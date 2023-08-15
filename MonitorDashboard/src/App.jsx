@@ -4,6 +4,7 @@ import "./App.css";
 import Login from "./Pages/Login/Login";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Home from "./Pages/Home/Home";
+import Logs from "./Pages/Logs/Logs";
 
 const darkTheme = createTheme({
   palette: {
@@ -16,7 +17,7 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
