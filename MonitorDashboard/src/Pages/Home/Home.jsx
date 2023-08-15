@@ -8,6 +8,10 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+
+import Logs from '../Logs/Logs';
+import Settings from '../Settings/Settings';
+import Dialogs from '../../Components/Dialogs/Dialogs';
 import StatusPage from '../StatusPage/StatusPage';
 
 /* Icons */
@@ -83,6 +87,7 @@ const iconMapping = {
 export default function Home() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [page, setPage] = React.useState('Home');
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -92,8 +97,15 @@ export default function Home() {
     setOpen(false);
   };
 
+  const handlePage = (text) => {
+    //console.log(text);
+    setPage(text);
+  }
+
+  const [checked, setChecked] = React.useState(['bandwidth', 'latency', 'availability','upload', 'download','jitter' ]);
+
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' ,}}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -109,6 +121,7 @@ export default function Home() {
           <Typography variant="h6" noWrap component="div">
             Monitor Dashboard
           </Typography>
+          <Dialogs />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -133,7 +146,8 @@ export default function Home() {
         <List>
           {['Home', 'Location', 'Logs', 'Settings'].map((text) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>
+              {/* <ListItemButton> */}
+              <ListItemButton onClick={ ()=> { handlePage(text); }}>
                 <ListItemIcon>
                 {iconMapping[text]}
                 </ListItemIcon>
@@ -145,7 +159,9 @@ export default function Home() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <FloorMap />
+        { (page === 'Home') && <StatusPage checked={checked}/> }
+        { (page === 'Logs') && <Logs/> }
+        { (page === 'Settings') && <Settings checked={checked} setChecked={setChecked}/> }
       </Main>
     </Box>
   );
