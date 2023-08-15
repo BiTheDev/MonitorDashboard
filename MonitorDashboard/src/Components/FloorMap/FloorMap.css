@@ -1,50 +1,27 @@
-#hub, #musk, #mainBase,#robotic,#dome,#walkway, #ramm {
-    transition: all 0.3s ease; /* Smooth transition */
-  }
+#hub,
+#musk,
+#mainBase,
+#robotic,
+#dome,
+#walkway,
+#ramm {
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover styles for the path */
+#hub:hover,
+#musk:hover,
+#robotic:hover,
+#dome:hover,
+#ramm:hover,
+#dome:hover,
+#mainBase:hover,
+#walkway:hover {
+  fill: #ECF0F1;
+  stroke: #2C3E50;
+  opacity: 1.2;
+}
+
+
+
   
-  /* Hover styles for the path */
-  #hub:hover {
-    fill: #a0a0a0;
-    stroke: #333333;
-    opacity: 1.2;
-  }
-
-
-  #musk:hover {
-    fill: #a0a0a0;
-    stroke: #333333;
-    opacity: 1.2;
-  }
-
-
-  #robotic:hover {
-    fill: #a0a0a0;
-    stroke: #333333;
-    opacity: 1.2;
-  }
-
-
-  #dome:hover {
-    fill: #a0a0a0;
-    stroke: #333333;
-    opacity: 1.2;
-  }
-
-  #walkway:hover {
-    fill: #a0a0a0;
-    stroke: #333333;
-    opacity: 1.2;
-  }
-
-
-  #ramm:hover {
-    fill: #a0a0a0;
-    stroke: #333333;
-    opacity: 1.2;
-  }
-
-  #mainBase:hover {
-    fill: #a0a0a0;
-    stroke: #333333;
-    opacity: 1.2;
-  }
