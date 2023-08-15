@@ -12,10 +12,9 @@ import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import UploadIcon from '@mui/icons-material/Upload';
 import DownloadIcon from '@mui/icons-material/Download';
 
-
-export default function Layout() {
-    const [checked, setChecked] = React.useState(['bandwidth', 'latency', 'availability','upload', 'download','jitter' ]);
-  
+export default function Layout({ checked, setChecked }) {
+    //const [checked, setChecked] = React.useState(['bandwidth', 'latency', 'availability','upload', 'download','jitter' ]);
+    
     const handleToggle = (value) => () => {
       const currentIndex = checked.indexOf(value);
       const newChecked = [...checked];
@@ -32,7 +31,7 @@ export default function Layout() {
     return (
       <List
         sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-        subheader={<ListSubheader>Dashboard Layout</ListSubheader>}
+        subheader={<ListSubheader>Dashboard Display</ListSubheader>}
       >
         <ListItem>
           <ListItemIcon>

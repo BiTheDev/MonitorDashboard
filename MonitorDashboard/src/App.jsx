@@ -4,7 +4,6 @@ import "./App.css";
 import Login from "./Pages/Login/Login";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Home from "./Pages/Home/Home";
-import Logs from "./Pages/Logs/Logs";
 
 const darkTheme = createTheme({
   palette: {
