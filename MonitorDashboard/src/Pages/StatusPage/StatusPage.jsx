@@ -4,7 +4,7 @@ import LineChart from "../../Components/Chart/LineChart";
 import GaugeChart from "../../Components/Chart/GaugeChart";
 import StatusBox from "../../Components/Status/StatusBox";
 
-const StatusPage = () => {
+const StatusPage = ({ checked }) => {
   return (
     <Container maxWidth="xl">
       <Grid container spacing={3}>
@@ -26,38 +26,38 @@ const StatusPage = () => {
         </Grid>
 
         {/* Gauge Charts */}
-        <Grid item xs={4}>
-          <Paper elevation={3} style={{ borderRadius: '15px', padding: '5px' }}>
+        {checked.includes('bandwidth') && <Grid item xs={4}>
+          <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
             <GaugeChart initialTitle={"BandWidth"} initialValue={75} />
           </Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper elevation={3} style={{ borderRadius: '15px', padding: '5px' }}>
+        </Grid>}
+        {checked.includes('latency') && <Grid item xs={4}>
+          <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
             <GaugeChart initialTitle={"Latency"} initialValue={60} />
           </Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper elevation={3} style={{ borderRadius: '15px', padding: '5px' }}>
+        </Grid>}
+        {checked.includes('availability') && <Grid item xs={4}>
+          <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
             <GaugeChart initialTitle={"Availability"} initialValue={60} />
           </Paper>
-        </Grid>
+        </Grid>}
         
         {/* Line Charts */}
-        <Grid item xs={4}>
+        {checked.includes('upload') && <Grid item xs={4}>
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
             <LineChart initialChartTitle={"ThroughPut - Upload"} initialChartData = {[15,30,45,25,20,40]} />
           </Paper>
-        </Grid>
-        <Grid item xs={4}>
+        </Grid>}
+        {checked.includes('download') && <Grid item xs={4}>
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
             <LineChart initialChartTitle={"ThroughPut - Download"} initialChartData = {[15,20,40,30,20,30]} />
           </Paper>
-        </Grid>
-        <Grid item xs={4}>
+        </Grid>}
+        {checked.includes('jitter') && <Grid item xs={4}>
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
             <GaugeChart initialTitle={"Jitter"} initialValue={80} />
           </Paper>
-        </Grid>
+        </Grid>}
       </Grid>
     </Container>
   );
