@@ -160,6 +160,7 @@ export default function Home() {
       <Main open={open}>
         <DrawerHeader />
         { (page === 'Home') && <StatusPage checked={checked}/> }
+        { (page === 'Location') && <FloorMap/> }
         { (page === 'Logs') && <Logs/> }
         { (page === 'Settings') && <Settings checked={checked} setChecked={setChecked}/> }
       </Main>
