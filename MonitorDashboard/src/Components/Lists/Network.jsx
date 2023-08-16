@@ -7,6 +7,7 @@ import ListSubheader from '@mui/material/ListSubheader';
 import Switch from '@mui/material/Switch';
 
 import CellTowerIcon from '@mui/icons-material/CellTower';
+import StorageIcon from '@mui/icons-material/Storage';
 import RouterIcon from '@mui/icons-material/Router';
 
 
@@ -34,7 +35,7 @@ export default function Network() {
       >
         <ListItem>
           <ListItemIcon>
-            <CellTowerIcon />
+            <StorageIcon />
           </ListItemIcon>
           <ListItemText id="switch-list-label-core" primary="Core" />
           <Switch
@@ -146,7 +147,7 @@ export default function Network() {
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <RouterIcon />
+            <CellTowerIcon />
           </ListItemIcon>
           <ListItemText id="switch-list-label-radio-outdoor" primary="Radio - Outdoor" />
           <Switch

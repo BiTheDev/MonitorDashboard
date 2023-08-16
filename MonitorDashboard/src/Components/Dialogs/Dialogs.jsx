@@ -78,9 +78,7 @@ export default function CustomizedDialogs() {
             Software Updated
           </Typography>
           <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla.
+            The software of Dashboard has been upated. This update provides important bug fixes and security updates and is recommended for all users.
           </Typography>
           <DialogActions>
           <Button autoFocus onClick={handleClose}>
@@ -90,16 +88,10 @@ export default function CustomizedDialogs() {
         </DialogContent>
         <DialogContent dividers>
           <Typography gutterBottom>
-            Radio Disconnected
+            Air Quality Monitor Disconnected
           </Typography>
           <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla.
+            Air quality monitor on the Musk Observatory disconnected at 12:12pm on 8/24/2023. Please check out the details.
           </Typography>
           <DialogActions>
           <Button autoFocus onClick={handleClose}>
