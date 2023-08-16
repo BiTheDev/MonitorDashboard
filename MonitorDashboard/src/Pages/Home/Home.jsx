@@ -9,7 +9,7 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
-import Logs from '../Logs/Logs';
+import Devicelogs from '../Devicelogs/Devicelogs';
 import Settings from '../Settings/Settings';
 import Dialogs from '../../Components/Dialogs/Dialogs';
 import StatusPage from '../StatusPage/StatusPage';
@@ -158,7 +158,7 @@ export default function Home() {
       <Main open={open}>
         <DrawerHeader />
         { (page === 'Home') && <StatusPage checked={checked}/> }
-        { (page === 'Logs') && <Logs/> }
+        { (page === 'Logs') && <Devicelogs/> }
         { (page === 'Settings') && <Settings checked={checked} setChecked={setChecked}/> }
       </Main>
     </Box>
