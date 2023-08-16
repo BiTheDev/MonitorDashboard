@@ -28,6 +28,8 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import PlaceIcon from '@mui/icons-material/Place';
 
+import FloorMap from '../../Components/FloorMap/FloorMap';
+
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -159,6 +161,7 @@ export default function Home() {
         <DrawerHeader />
         { (page === 'Home') && <StatusPage checked={checked}/> }
         { (page === 'Logs') && <Devicelogs/> }
+        { (page === 'Location') && <FloorMap/> }
         { (page === 'Settings') && <Settings checked={checked} setChecked={setChecked}/> }
       </Main>
     </Box>
