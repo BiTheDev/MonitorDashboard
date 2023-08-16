@@ -1,0 +1,27 @@
+#hub,
+#musk,
+#mainBase,
+#robotic,
+#dome,
+#walkway,
+#ramm {
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover styles for the path */
+#hub:hover,
+#musk:hover,
+#robotic:hover,
+#dome:hover,
+#ramm:hover,
+#dome:hover,
+#mainBase:hover,
+#walkway:hover {
+  fill: #ECF0F1;
+  stroke: #2C3E50;
+  opacity: 1.2;
+}
+
+
+
+  

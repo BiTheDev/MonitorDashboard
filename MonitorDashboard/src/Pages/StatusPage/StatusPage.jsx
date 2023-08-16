@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Paper } from "@mui/material";
+import { Container, Grid, Paper, Typography } from "@mui/material";
 import LineChart from "../../Components/Chart/LineChart";
 import GaugeChart from "../../Components/Chart/GaugeChart";
 import StatusBox from "../../Components/Status/StatusBox";
@@ -7,6 +7,9 @@ import StatusBox from "../../Components/Status/StatusBox";
 const StatusPage = ({ checked }) => {
   return (
     <Container maxWidth="xl">
+      <Typography variant="h4" gutterBottom>
+        Core Status
+      </Typography>
       <Grid container spacing={3}>
         {/* Status Boxes */}
         <Grid item xs={4}>
