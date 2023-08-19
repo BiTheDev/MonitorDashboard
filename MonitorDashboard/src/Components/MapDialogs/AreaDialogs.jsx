@@ -16,8 +16,8 @@ const AreaDialog = ({ open, area, onClose }) => {
   return (
     <Dialog open={open} onClose={onClose} maxWidth="lg">
       <DialogTitle>{area?.title}</DialogTitle>
-      <DialogContent>
-        <Grid container spacing={1}>
+      <DialogContent style={{width: 800}}>
+        <Grid container spacing={3}>
           <Grid item xs={12}>
             <Typography variant="h5">
               Access Point Information:
@@ -32,8 +32,10 @@ const AreaDialog = ({ open, area, onClose }) => {
               Connected Devices: {area?.accessPoint.connectedDevices}
             </Typography>
           </Grid>
+          </Grid>
+          <Grid container spacing={3}>
           <Grid item xs={6}>
-            <Paper elevation={3} style={{ borderRadius: '15px', padding: '10px' }}>
+            <Paper elevation={3} style={{ borderRadius: '15px', padding: '5px' }}>
               <GaugeChart
                 initialTitle={"BandWidth"}
                 initialValue={area?.accessPoint.bandwidth}
@@ -41,7 +43,7 @@ const AreaDialog = ({ open, area, onClose }) => {
             </Paper>
           </Grid>
           <Grid item xs={6}>
-            <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
+            <Paper elevation={3} style={{ borderRadius: '15px', padding: '5px' }}>
               <GaugeChart
                 initialTitle={"latency"}
                 initialValue={area?.accessPoint.latency}
@@ -49,7 +51,7 @@ const AreaDialog = ({ open, area, onClose }) => {
             </Paper>
           </Grid>
           <Grid item xs={6}>
-            <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
+            <Paper elevation={3} style={{ borderRadius: '15px', padding: '5px' }}>
               <GaugeChart
                 initialTitle={"jitter"}
                 initialValue={area?.accessPoint.jitter}
@@ -57,7 +59,7 @@ const AreaDialog = ({ open, area, onClose }) => {
             </Paper>
           </Grid>
           <Grid item xs={6}>
-            <Paper elevation={3} style={{ borderRadius: '15px', padding: '20px' }}>
+            <Paper elevation={3} style={{ borderRadius: '15px', padding: '5px' }}>
               <GaugeChart
                 initialTitle={"availability"}
                 initialValue={area?.accessPoint.availability}

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, Typography, Paper } from "@mui/material";
 import AreaDialog from "../MapDialogs/AreaDialogs";
 import "./FloorMap.css";
@@ -9,6 +9,12 @@ const FloorMap = () => {
   const [coords, setCoords] = useState({ x: 200, y: 200 });
   const [showTooltip, setShowTooltip] = useState(false);
   const svgContainerRef = useRef(null);
+
+  useEffect(() => {
+    if (info === null) {
+      return null;
+    }
+  }, [info]);
 
   const SVG_PATH_DATA = [
     {
@@ -186,11 +192,27 @@ const FloorMap = () => {
           border: "3px solid black",
           color: "#333",
           padding: "5px",
+          width: 250,
         }}
       >
         <Typography variant="subtitle1" gutterBottom>
           {info.title}
         </Typography>
+        <Typography>
+          Status: {info.accessPoint?.status}
+          {" "}
+          <span
+            style={{
+              color: info.accessPoint?.status === "healthy" ? "green" : "red",
+            }}
+          >
+            ●
+          </span>
+        </Typography>
+        <Typography>
+          Connected Devices: {info.accessPoint?.connectedDevices}
+        </Typography>
+        <Typography>Latency: {info.accessPoint?.latency} ms</Typography>
       </Paper>
       <AreaDialog
         open={dialogOpen}
