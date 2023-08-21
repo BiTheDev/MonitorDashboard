@@ -112,17 +112,21 @@ const NewGaugeChart = ({
       const yCenter = chart.getDatasetMeta(0).data[0].y;
       const needleValue = Math.round(data.datasets[0].needleValue);
       const circumferenceRotation =
-        (chart.getDatasetMeta(0).data[0].circumference /
+        Math.round((chart.getDatasetMeta(0).data[0].circumference /
           Math.PI /
           data.datasets[0].data[0]) *
-        needleValue;
+        needleValue) * 100;
 
       // flowMeter
 
       ctx.font = "bold 30px sans-serif";
       ctx.fillStyle = "black";
       ctx.textAlign = "center";
-      ctx.fillText(needleValue + chartMeasureType, xCenter, yCenter + 45);
+      if (chartTitle == "Availability"){
+        ctx.fillText(circumferenceRotation + chartMeasureType, xCenter, yCenter + 45);
+      }else{
+        ctx.fillText(needleValue + chartMeasureType, xCenter, yCenter + 45);
+      }
     },
   };
 
