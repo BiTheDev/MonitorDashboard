@@ -43,6 +43,8 @@ const NewGaugeChart = ({
   initialColorTheme,
   initialMeasureType,
   initialMeasureRange,
+  initialMaxRandomVal,
+  initialMinRandomVal
 }) => {
   const chartRef = useRef(null);
   const [chartTitle, setChartTitle] = useState(initialChartTitle);
@@ -51,6 +53,9 @@ const NewGaugeChart = ({
   const [chartMeasureType, setChartMeasureType] = useState(initialMeasureType);
   const [chartMeasureRange, setChartMeasureRange] =
     useState(initialMeasureRange);
+
+  const [maxRandomVal, setMaxRandomVal] = useState(initialMaxRandomVal);
+  const [minRandomVal, setMinRandomVal] = useState(initialMinRandomVal);
 
   const gaugeNeedle = {
     id: "gaugeNeedle",
@@ -177,7 +182,7 @@ const NewGaugeChart = ({
     }
 
     const changeValueRandomly = () => {
-      const newValue = Math.round(Math.random() * 100) + 1;
+      const newValue = Math.round(Math.random() * (maxRandomVal - minRandomVal + 1) + minRandomVal);
       setChartValue(newValue);
 
       if (myChart) {
