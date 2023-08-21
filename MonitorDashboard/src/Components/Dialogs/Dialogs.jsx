@@ -61,7 +61,7 @@ export default function CustomizedDialogs() {
 
   return (
     <>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button variant="outlined" onClick={handleClickOpen} sx={{ borderColor: 'transparent', marginLeft: 'auto'}}>
         {/* Notifications */}
         <Badges />
       </Button>
