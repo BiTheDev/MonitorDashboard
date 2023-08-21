@@ -58,7 +58,7 @@ const StatusPage = ({ checked }) => {
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '25px' }}>
             <NewGaugeChart
              initialChartTitle={"Availability"}
-             initialChartValue={190}
+             initialChartValue={240}
              initialColorTheme={["#C0392B", "#E67E22", "#27AE60"]}
              initialMeasureType={"%"}
              initialMeasureRange={[60, 80, 100]}

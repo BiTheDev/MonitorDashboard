@@ -86,9 +86,9 @@ const AreaDialog = ({ open, area, onClose }) => {
                 initialChartValue={area?.accessPoint.availability}
                 initialColorTheme={["#C0392B", "#E67E22", "#27AE60"]}
                 initialMeasureType={"%"}
-                initialMeasureRange={[30, 60, 100]}
-                initialMaxRandomVal={100}
-                initialMinRandomVal={80}
+                initialMeasureRange={[60, 80, 100]}
+                initialMaxRandomVal={240}
+                initialMinRandomVal={220}
               />
             </Paper>
           </Grid>
