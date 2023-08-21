@@ -63,7 +63,7 @@ const StatusPage = ({ checked }) => {
              initialMeasureType={"%"}
              initialMeasureRange={[60, 80, 100]}
              initialMaxRandomVal={240}
-             initialMinRandomVal={220}
+             initialMinRandomVal={240}
              />
           </Paper>
         </Grid>}
