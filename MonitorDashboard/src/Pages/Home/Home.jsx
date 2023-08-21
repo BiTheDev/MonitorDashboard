@@ -9,6 +9,11 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
+import Devicelogs from '../Devicelogs/Devicelogs';
+import Settings from '../Settings/Settings';
+import Dialogs from '../../Components/Dialogs/Dialogs';
+import StatusPage from '../StatusPage/StatusPage';
+
 /* Icons */
 import IconButton from '@mui/material/IconButton';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -18,12 +23,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MenuIcon from '@mui/icons-material/Menu';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HouseIcon from '@mui/icons-material/House';
-import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import PlaceIcon from '@mui/icons-material/Place';
+
+import FloorMap from '../../Components/FloorMap/FloorMap';
 
 const drawerWidth = 240;
 
@@ -82,6 +87,7 @@ const iconMapping = {
 export default function Home() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [page, setPage] = React.useState('Home');
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -91,8 +97,15 @@ export default function Home() {
     setOpen(false);
   };
 
+  const handlePage = (text) => {
+    //console.log(text);
+    setPage(text);
+  }
+
+  const [checked, setChecked] = React.useState(['bandwidth', 'latency', 'availability','upload', 'download','jitter' ]);
+
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' ,}}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -108,6 +121,7 @@ export default function Home() {
           <Typography variant="h6" noWrap component="div">
             Monitor Dashboard
           </Typography>
+          <Dialogs />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -130,9 +144,10 @@ export default function Home() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home', 'Location', 'Logs', 'Settings'].map((text, index) => (
+          {['Home', 'Location', 'Logs', 'Settings'].map((text) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>
+              {/* <ListItemButton> */}
+              <ListItemButton onClick={ ()=> { handlePage(text); }}>
                 <ListItemIcon>
                 {iconMapping[text]}
                 </ListItemIcon>
@@ -144,6 +159,10 @@ export default function Home() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
+        { (page === 'Home') && <StatusPage checked={checked}/> }
+        { (page === 'Logs') && <Devicelogs/> }
+        { (page === 'Location') && <FloorMap/> }
+        { (page === 'Settings') && <Settings checked={checked} setChecked={setChecked}/> }
       </Main>
     </Box>
   );
