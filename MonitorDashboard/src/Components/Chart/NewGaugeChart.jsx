@@ -120,7 +120,7 @@ const NewGaugeChart = ({
       // flowMeter
 
       ctx.font = "bold 30px sans-serif";
-      ctx.fillStyle = "black";
+      ctx.fillStyle = "#BDC3C7";
       ctx.textAlign = "center";
       if (chartTitle == "Availability"){
         ctx.fillText(circumferenceRotation + chartMeasureType, xCenter, yCenter + 45);
