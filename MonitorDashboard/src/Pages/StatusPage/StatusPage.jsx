@@ -61,9 +61,9 @@ const StatusPage = ({ checked }) => {
              initialChartValue={190}
              initialColorTheme={["#C0392B", "#E67E22", "#27AE60"]}
              initialMeasureType={"%"}
-             initialMeasureRange={[30, 60, 100]}
-             initialMaxRandomVal={190}
-             initialMinRandomVal={170}
+             initialMeasureRange={[60, 80, 100]}
+             initialMaxRandomVal={240}
+             initialMinRandomVal={220}
              />
           </Paper>
         </Grid>}
