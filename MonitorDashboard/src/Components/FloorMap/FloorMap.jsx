@@ -27,6 +27,7 @@ const FloorMap = () => {
         latency: 20,
         bandwidth: 20,
         jitter: 5,
+        availability: 100,
         connectedDevices: 20,
       },
     },

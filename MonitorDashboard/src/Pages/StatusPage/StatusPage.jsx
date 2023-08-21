@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Grid, Paper, Typography } from "@mui/material";
 import LineChart from "../../Components/Chart/LineChart";
-import GaugeChart from "../../Components/Chart/GaugeChart";
 import StatusBox from "../../Components/Status/StatusBox";
 import NewGaugeChart from "../../Components/Chart/NewGaugeChart";
 const StatusPage = ({ checked }) => {

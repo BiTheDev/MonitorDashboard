@@ -167,7 +167,7 @@ const NewGaugeChart = ({
         type: "doughnut",
         data,
         options: {
-          aspectRatio: 1.3,
+          aspectRatio: 1.1,
           plugins: {
             legend: {
               display: false,
