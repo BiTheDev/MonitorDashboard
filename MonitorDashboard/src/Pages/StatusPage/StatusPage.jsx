@@ -70,12 +70,12 @@ const StatusPage = ({ checked }) => {
         {/* Line Charts */}
         {checked.includes('upload') && <Grid item xs={4}>
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '25px' }}>
-            <LineChart initialChartTitle={"ThroughPut - Upload"} initialChartData = {[15,30,45,25,20,40]} />
+            <LineChart initialChartTitle={"Throughput - Upload"} initialChartData = {[15,30,45,25,20,40]} />
           </Paper>
         </Grid>}
         {checked.includes('download') && <Grid item xs={4}>
           <Paper elevation={3} style={{ borderRadius: '15px', padding: '25px' }}>
-            <LineChart initialChartTitle={"ThroughPut - Download"} initialChartData = {[15,20,40,30,20,30]} />
+            <LineChart initialChartTitle={"Throughput - Download"} initialChartData = {[15,20,40,30,20,30]} />
           </Paper>
         </Grid>}
         {checked.includes('jitter') && <Grid item xs={4}>
