@@ -181,6 +181,217 @@ const FloorMap = () => {
             <title>{data.title}</title>
           </path>
         ))}
+        <text
+          xmlSpace="preserve"
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: "bold",
+            fontStretch: "normal",
+            fontSize: "53.3333px",
+            lineHeight: "0px",
+            fontFamily: "sans-serif",
+            fill: "#000000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 36,
+            strokeLinejoin: "bevel",
+            strokeOpacity: 1,
+          }}
+          x="291.89108"
+          y="657.54962"
+          id="text4"
+          inkscape:label="RAMM text"
+        >
+          <tspan
+            sodipodi:role="line"
+            id="tspan4"
+            x="291.89108"
+            y="657.54962"
+            style={{
+              fontStyle: "normal",
+              fontVariant: "normal",
+              fontWeight: "bold",
+              fontStretch: "normal",
+              fontSize: "53.3333px",
+              lineHeight: "0px",
+              fontFamily: "sans-serif",
+              fill: "#000000",
+              fillOpacity: 1,
+              stroke: "none",
+              strokeWidth: 36,
+              strokeLinejoin: "bevel",
+              strokeOpacity: 1,
+            }}
+          >
+            RAMM
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: "bold",
+            fontStretch: "normal",
+            fontSize: "53.3333px",
+            lineHeight: "0px",
+            fontFamily: "sans-serif",
+            fill: "#000000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 36,
+            strokeLinejoin: "bevel",
+            strokeOpacity: 1,
+          }}
+          x="997.76141"
+          y="237.15529"
+          id="text5"
+          inkscape:label="Musk text"
+        >
+          <tspan sodipodi:role="line" id="tspan5" x="1012.76141" y="240.15529">
+            Musk
+          </tspan>
+          <tspan sodipodi:role="line" x="997.76141" y="237.15529" id="tspan7" />
+          <tspan sodipodi:role="line" x="997.76141" y="237.15529" id="tspan6" />
+        </text>
+        <text
+          xmlSpace="preserve"
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: "bold",
+            fontStretch: "normal",
+            fontSize: "53.3333px",
+            lineHeight: "0px",
+            fontFamily: "sans-serif",
+            fill: "#000000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 36,
+            strokeLinejoin: "bevel",
+            strokeOpacity: 1,
+          }}
+          x="1164.4111"
+          y="664.4621"
+          id="text8"
+        >
+          <tspan sodipodi:role="line" id="tspan8" x="1164.4111" y="664.4621">
+            Walkway
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: "bold",
+            fontStretch: "normal",
+            fontSize: "53.3333px",
+            lineHeight: "0px",
+            fontFamily: "sans-serif",
+            fill: "#000000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 36,
+            strokeLinejoin: "bevel",
+            strokeOpacity: 1,
+          }}
+          x="1181.5033"
+          y="1038.3556"
+          id="text9"
+        >
+          <tspan
+            sodipodi:role="line"
+            id="tspan9"
+            x="1181.5033"
+            y="1038.3556"
+            style={{fill:"#000000",fillOpacity:1}}
+          >
+            Habitat
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: "bold",
+            fontStretch: "normal",
+            fontSize: "53.3333px",
+            lineHeight: "0px",
+            fontFamily: "sans-serif",
+            fill: "#000000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 36,
+            strokeLinejoin: "bevel",
+            strokeOpacity: 1,
+          }}
+          x="1538.3044"
+          y="984.9422"
+          id="text10"
+        >
+          <tspan
+            sodipodi:role="line"
+            id="tspan10"
+            x="1555.3044"
+            y="984.9422"
+            style={{fill:"#000000",fillOpacity:1}}
+          >
+            GreenHub
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: "bold",
+            fontStretch: "normal",
+            fontSize: "53.3333px",
+            lineHeight: "0px",
+            fontFamily: "sans-serif",
+            fill: "#000000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 36,
+            strokeLinejoin: "bevel",
+            strokeOpacity: 1,
+          }}
+          x="2068.165"
+          y="1021.2632"
+          id="text11"
+        >
+          <tspan sodipodi:role="line" id="tspan11" x="2090.165" y="1021.2632">
+            Science Dome
+          </tspan>
+        </text>
+        <text
+          xmlSpace="preserve"
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: "bold",
+            fontStretch: "normal",
+            fontSize: "53.3333px",
+            lineHeight: "0px",
+            fontFamily: "sans-serif",
+            fill: "#000000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 36,
+            strokeLinejoin: "bevel",
+            strokeOpacity: 1,
+          }}
+          x="2016.8883"
+          y="329.02625"
+          id="text12"
+        >
+          <tspan sodipodi:role="line" id="tspan12" x="2027.8883" y="329.02625">
+            Robotic
+          </tspan>
+        </text>
       </svg>
       <Paper
         variant="outlined"
@@ -200,8 +411,7 @@ const FloorMap = () => {
           {info.title}
         </Typography>
         <Typography>
-          Status: {info.accessPoint?.status}
-          {" "}
+          Status: {info.accessPoint?.status}{" "}
           <span
             style={{
               color: info.accessPoint?.status === "healthy" ? "green" : "red",
