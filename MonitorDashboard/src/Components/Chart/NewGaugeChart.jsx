@@ -199,7 +199,7 @@ const NewGaugeChart = ({
       }
     };
 
-    const intervalId = setInterval(changeValueRandomly, 10000); // Change to setInterval to keep updating the needle
+    const intervalId = setInterval(changeValueRandomly, 5000); // Change to setInterval to keep updating the needle
 
     return () => {
       if (myChart) {
